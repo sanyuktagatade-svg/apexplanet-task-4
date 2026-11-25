@@ -1,252 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanyukta Gatade | Portfolio</title>
 
-    <title>Sanyukta Gatade | My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
 
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 75px;
-        }
+    header {
+      background: #172b4d;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6fb;
-            color: #333;
-            line-height: 1.6;
-        }
+    header h2 {
+      font-size: 24px;
+    }
 
-        header {
-            background: #172554;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-        nav {
-            background: #1e3a8a;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    nav a:hover {
+      color: #65d6ce;
+    }
 
-        nav a:hover {
-            color: #facc15;
-        }
+    section {
+      padding: 70px 8%;
+      text-align: center;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-            scroll-margin-top: 75px;
-        }
+    .home {
+      min-height: 430px;
+      background: linear-gradient(135deg, #172b4d, #315b88);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-        #home {
-            max-width: 100%;
-            background: #dbeafe;
-            text-align: center;
-            padding: 100px 20px;
-        }
+    .home h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
 
-        #home h1 {
-            color: #172554;
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
+    .home h3 {
+      font-size: 23px;
+      margin-bottom: 15px;
+      color: #65d6ce;
+    }
 
-        h2 {
-            color: #1e3a8a;
-            margin-bottom: 20px;
-        }
+    .home p {
+      max-width: 600px;
+      margin-bottom: 25px;
+    }
 
-        .btn {
-            display: inline-block;
-            background: #1e3a8a;
-            color: white;
-            padding: 12px 25px;
-            margin-top: 20px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
+    .btn {
+      display: inline-block;
+      background: #65d6ce;
+      color: #172b4d;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 6px;
+    }
 
-        .btn:hover {
-            background: #2563eb;
-        }
+    .btn:hover {
+      background: white;
+    }
 
-        .project {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-        }
+    .section-title {
+      font-size: 30px;
+      color: #172b4d;
+      margin-bottom: 25px;
+    }
 
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
+    .about p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 17px;
+    }
 
-        .contact-links a {
-            display: inline-block;
-            background: #1e3a8a;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-        }
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
 
-        .contact-links a:hover {
-            background: #2563eb;
-        }
+    .project-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
 
-        footer {
-            background: #172554;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
 
-        @media (max-width: 600px) {
-            #home h1 {
-                font-size: 28px;
-            }
+    .project-card h3 {
+      color: #172b4d;
+      margin-bottom: 12px;
+    }
 
-            nav {
-                gap: 15px;
-            }
+    .project-card p {
+      margin-bottom: 15px;
+      color: #555;
+    }
 
-            section {
-                padding: 45px 18px;
-            }
-        }
-    </style>
+    .project-link {
+      display: inline-block;
+      color: #126b91;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      background: #e8eef6;
+    }
+
+    .contact p {
+      margin: 12px;
+    }
+
+    .contact a {
+      color: #126b91;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #172b4d;
+      color: white;
+      text-align: center;
+      padding: 18px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .home h1 {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h2 style="color:white;">My Portfolio</h2>
-        <p>Computer Science Engineering Student</p>
-    </header>
+  <header>
+    <h2>My Portfolio</h2>
 
-    <!-- NAVIGATION -->
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- HOME -->
-    <section id="home">
-        <h1>Hello, I'm Sanyukta!</h1>
-        <h3>Computer Science Engineering Student</h3>
+  <section class="home" id="home">
+    <h1>Hello, I'm Sanyukta!</h1>
+    <h3>Computer Science Engineering Student</h3>
 
+    <p>
+      Welcome to my personal portfolio website.
+      I am passionate about technology, software development
+      and learning new skills.
+    </p>
+
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <p>
+      I am a final-year Computer Science Engineering student
+      interested in software development and web technologies.
+      I enjoy learning new technologies, improving my coding
+      skills and building innovative projects.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-container">
+
+      <div class="project-card">
+        <h3>Megatron Desktop Assistant</h3>
         <p>
-            Welcome to my personal portfolio website.
-            Thank you for visiting!
+          A desktop voice assistant developed using Python
+          to perform basic computer tasks and assist users.
         </p>
+      </div>
 
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About Me</h2>
-
+      <div class="project-card">
+        <h3>Multi AI Agent Simulation Platform</h3>
         <p>
-            I am a final-year Computer Science Engineering student
-            interested in software development and web technologies.
-            I enjoy learning new technologies, improving my coding
-            skills and building innovative projects.
+          A smart city simulation project designed to
+          coordinate multiple AI agents and monitor
+          simulated city activities.
         </p>
-    </section>
+      </div>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <h2>My Projects</h2>
-
-        <div class="project">
-            <h3>Megatron - Desktop Assistant</h3>
-            <p>
-                A Python-based desktop assistant designed to perform
-                basic computer tasks using voice commands.
-            </p>
-        </div>
-
-        <div class="project">
-            <h3>Multi AI Agent Simulation Platform</h3>
-            <p>
-                A smart city simulation platform that uses multiple
-                coordinated agents to simulate and monitor smart
-                city activities.
-            </p>
-        </div>
-
-        <div class="project">
-            <h3>Personal Portfolio Website</h3>
-            <p>
-                A responsive personal website developed using
-                HTML and CSS to showcase my skills and projects.
-            </p>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-
+      <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
         <p>
-            You can connect with me through the following platforms:
+          A personal website created using HTML, CSS
+          and JavaScript to showcase my skills and projects.
         </p>
+      </div>
 
-        <div class="contact-links">
+      <div class="project-card">
+        <h3>To-Do List Application</h3>
+        <p>
+          A task management application that allows users
+          to add, complete and delete daily tasks.
+        </p>
+        <a href="todo.html" class="project-link">
+          Open To-Do App →
+        </a>
+      </div>
 
-            <a
-                href="https://www.linkedin.com/in/sanyukta-raju-gatade-0a5b382b7"
-                target="_blank"
-                rel="noopener noreferrer">
-                LinkedIn Profile
-            </a>
+      <div class="project-card">
+        <h3>Product Listing Page</h3>
+        <p>
+          A product display page with product pictures,
+          category filtering and price sorting features.
+        </p>
+        <a href="products.html" class="project-link">
+          View Products →
+        </a>
+      </div>
 
-            <a
-                href="https://github.com/sanyuktagatade-svg"
-                target="_blank"
-                rel="noopener noreferrer">
-                GitHub Profile
-            </a>
+    </div>
+  </section>
 
-        </div>
-    </section>
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Me</h2>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Sanyukta Gatade | All Rights Reserved</p>
-    </footer>
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/sanyukta-raju-gatade-0a5b382b7"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn Profile
+      </a>
+    </p>
+
+    <p>
+      GitHub:
+      <a href="https://github.com/sanyuktagatade-svg"
+         target="_blank" rel="noopener noreferrer">
+        GitHub Profile
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Sanyukta Gatade | Personal Portfolio</p>
+  </footer>
 
 </body>
 </html>
