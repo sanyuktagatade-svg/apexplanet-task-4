@@ -3,41 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanyukta Gatade | Portfolio</title>
+
+    <title>Sanyukta Gatade | My Portfolio</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
             scroll-behavior: smooth;
+            scroll-padding-top: 75px;
         }
 
         body {
             font-family: Arial, sans-serif;
             background: #f4f6fb;
-            color: #222;
+            color: #333;
             line-height: 1.6;
         }
 
         header {
             background: #172554;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 25px;
         }
 
         nav {
             background: #1e3a8a;
             padding: 15px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -45,20 +56,22 @@
         }
 
         section {
-            padding: 55px 20px;
             max-width: 1000px;
             margin: auto;
+            padding: 60px 20px;
+            scroll-margin-top: 75px;
         }
 
         #home {
-            text-align: center;
-            padding: 90px 20px;
+            max-width: 100%;
             background: #dbeafe;
+            text-align: center;
+            padding: 100px 20px;
         }
 
-        h1 {
-            font-size: 38px;
+        #home h1 {
             color: #172554;
+            font-size: 38px;
             margin-bottom: 10px;
         }
 
@@ -73,8 +86,8 @@
             color: white;
             padding: 12px 25px;
             margin-top: 20px;
-            text-decoration: none;
             border-radius: 6px;
+            text-decoration: none;
         }
 
         .btn:hover {
@@ -83,18 +96,30 @@
 
         .project {
             background: white;
-            padding: 22px;
-            margin: 15px 0;
+            padding: 25px;
+            margin-bottom: 20px;
             border-radius: 10px;
-            box-shadow: 0 3px 10px #00000015;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .contact-links a {
             display: inline-block;
-            color: #1e40af;
-            margin: 10px;
-            font-weight: bold;
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
             text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            background: #2563eb;
         }
 
         footer {
@@ -103,93 +128,125 @@
             text-align: center;
             padding: 20px;
         }
+
+        @media (max-width: 600px) {
+            #home h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            section {
+                padding: 45px 18px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h2 style="color:white;">My Portfolio</h2>
-    <p>Computer Science Engineering Student</p>
-</header>
+    <!-- HEADER -->
+    <header>
+        <h2 style="color:white;">My Portfolio</h2>
+        <p>Computer Science Engineering Student</p>
+    </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<section id="home">
-    <h1>Hello, I'm Sanyukta!</h1>
-    <h3>Computer Science Engineering Student</h3>
-    <p>Welcome to my personal portfolio website.</p>
+    <!-- HOME -->
+    <section id="home">
+        <h1>Hello, I'm Sanyukta!</h1>
+        <h3>Computer Science Engineering Student</h3>
 
-    <a href="#projects" class="btn">View My Work</a>
-</section>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a final-year Computer Science Engineering student
-        interested in software development and web technologies.
-        I enjoy learning new technologies, improving my coding
-        skills and building innovative projects.
-    </p>
-</section>
-
-<section id="projects">
-    <h2>My Projects</h2>
-
-    <div class="project">
-        <h3>Megatron - Desktop Assistant</h3>
         <p>
-            A Python-based desktop assistant designed to perform
-            basic computer tasks using voice commands.
+            Welcome to my personal portfolio website.
+            Thank you for visiting!
         </p>
-    </div>
 
-    <div class="project">
-        <h3>Multi AI Agent Simulation Platform</h3>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Me</h2>
+
         <p>
-            A smart city simulation platform that uses multiple
-            coordinated agents to simulate and monitor
-            smart city activities.
+            I am a final-year Computer Science Engineering student
+            interested in software development and web technologies.
+            I enjoy learning new technologies, improving my coding
+            skills and building innovative projects.
         </p>
-    </div>
+    </section>
 
-    <div class="project">
-        <h3>Personal Portfolio Website</h3>
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project">
+            <h3>Megatron - Desktop Assistant</h3>
+            <p>
+                A Python-based desktop assistant designed to perform
+                basic computer tasks using voice commands.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Multi AI Agent Simulation Platform</h3>
+            <p>
+                A smart city simulation platform that uses multiple
+                coordinated agents to simulate and monitor smart
+                city activities.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Personal Portfolio Website</h3>
+            <p>
+                A responsive personal website developed using
+                HTML and CSS to showcase my skills and projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
         <p>
-            A responsive personal website developed using
-            HTML and CSS to showcase my skills and projects.
+            You can connect with me through the following platforms:
         </p>
-    </div>
-</section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
+        <div class="contact-links">
 
-    <p>You can connect with me through the following platforms:</p>
+            <a
+                href="https://www.linkedin.com/in/sanyukta-raju-gatade-0a5b382b7"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn Profile
+            </a>
 
-    <div class="contact-links">
+            <a
+                href="https://github.com/sanyuktagatade-svg"
+                target="_blank"
+                rel="noopener noreferrer">
+                GitHub Profile
+            </a>
 
-        <a href="https://www.linkedin.com/in/sanyukta-gatade-0a5b382b7"
-           target="_blank" rel="noopener noreferrer">
-            LinkedIn Profile
-        </a>
+        </div>
+    </section>
 
-        <a href="https://github.com/sanyuktagatade-svg"
-           target="_blank" rel="noopener noreferrer">
-            GitHub Profile
-        </a>
-
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Sanyukta Gatade | All Rights Reserved</p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Sanyukta Gatade | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
