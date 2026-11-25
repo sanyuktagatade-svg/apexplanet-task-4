@@ -1,67 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanyukta Gatade | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #1e3a8a;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        section {
+            padding: 55px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        #home {
+            text-align: center;
+            padding: 90px 20px;
+            background: #dbeafe;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 25px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        .project {
+            background: white;
+            padding: 22px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            color: #1e40af;
+            margin: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header>
-    <h2>My Portfolio</h2>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+    <h2 style="color:white;">My Portfolio</h2>
+    <p>Computer Science Engineering Student</p>
+</header>
 
-  <section class="hero">
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
     <h1>Hello, I'm Sanyukta!</h1>
     <h3>Computer Science Engineering Student</h3>
     <p>Welcome to my personal portfolio website.</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
 
-  <section id="about">
+    <a href="#projects" class="btn">View My Work</a>
+</section>
+
+<section id="about">
     <h2>About Me</h2>
     <p>
-      I am a final-year Computer Science Engineering student
-      interested in software development and web technologies.
-      I enjoy learning new technologies and building projects.
+        I am a final-year Computer Science Engineering student
+        interested in software development and web technologies.
+        I enjoy learning new technologies, improving my coding
+        skills and building innovative projects.
     </p>
-  </section>
+</section>
 
-  <section id="projects">
+<section id="projects">
     <h2>My Projects</h2>
-    <div class="project">
-      <h3>Megatron – Desktop Assistant</h3>
-      <p>A desktop assistant developed using Python.</p>
-    </div>
-    <div class="project">
-      <h3>Multi AI Agent Simulation Platform</h3>
-      <p>A smart city simulation platform using multiple agents.</p>
-    </div>
-    <div class="project">
-      <h3>Personal Portfolio</h3>
-      <p>A responsive website created using HTML, CSS and JavaScript.</p>
-    </div>
-  </section>
 
-  <section id="contact">
+    <div class="project">
+        <h3>Megatron - Desktop Assistant</h3>
+        <p>
+            A Python-based desktop assistant designed to perform
+            basic computer tasks using voice commands.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>Multi AI Agent Simulation Platform</h3>
+        <p>
+            A smart city simulation platform that uses multiple
+            coordinated agents to simulate and monitor
+            smart city activities.
+        </p>
+    </div>
+
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>
+            A responsive personal website developed using
+            HTML and CSS to showcase my skills and projects.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: sanyuktagatade@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/sanyuktagatade-svg">My GitHub</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sanyukta-gatade-0a5b382b7" target="_blank">
-    LinkedIn
-    </a></p>
-  </section>
 
-  <footer>
-    <p>© 2026 Sanyukta | Personal Portfolio</p>
-  </footer>
+    <p>You can connect with me through the following platforms:</p>
 
-  <script src="script.js"></script>
+    <div class="contact-links">
+
+        <a href="https://www.linkedin.com/in/sanyukta-gatade-0a5b382b7"
+           target="_blank" rel="noopener noreferrer">
+            LinkedIn Profile
+        </a>
+
+        <a href="https://github.com/sanyuktagatade-svg"
+           target="_blank" rel="noopener noreferrer">
+            GitHub Profile
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sanyukta Gatade | All Rights Reserved</p>
+</footer>
+
 </body>
 </html>
